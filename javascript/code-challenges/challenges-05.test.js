@@ -148,12 +148,9 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  let adder = str.reduce((accumulator, str)=>{
-    accumulator = str + accumulator;
-    return accumulator;
-  }, '');
-  return adder;
+  return str.split('').reduce((reversed, character) => character + reversed, '');
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
