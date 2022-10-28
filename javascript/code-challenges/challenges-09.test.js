@@ -31,7 +31,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 };
 
 const getCourseKeys = (obj) => {
-
+  return Object.keys(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  
+  return Object.values(obj).includes(value);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,7 +66,13 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  // Solution code here...
+  const formattedData = [];
+  const keys = Object.keys(obj);
+  const values = Object.values(obj);
+  for (let i = 0; i < keys.length; i++) {
+    formattedData.push(`${keys[i]}: ${values[i]}`);
+  }
+  return formattedData;
 };
 
 
@@ -122,7 +128,11 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+
+
+  arr.forEach(person => {
+    houses.push(person.house);
+  });
   return houses;
 };
 
@@ -139,8 +149,17 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
+  let result;
+  arr.forEach(person => {
+    if (person.name === character) {
+      result = Object.values(person);
+    }
+  });
+  if (result.length === 4) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
