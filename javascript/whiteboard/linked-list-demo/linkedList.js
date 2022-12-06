@@ -8,37 +8,69 @@ class Node {
 }
 
 class LinkedList {
-  constructor() { 
+  constructor() {
     this.head = null;
   }
-  include(value){
+  include(value) {
     let node = new Node(value);
 
-    if(!this.head) {
+    if (!this.head) {
       this.head = node;
       return;
     }
 
     let current = this.head;
 
-    while(current.next){
+    while (current.next) {
       current = current.next;
     }
     current.next = node;
   }
+
+
   toString() {
     let current = this.head;
-    while(current){
+    while (current) {
       console.log(current.value);
       current = current.next;
     }
   }
-  insert(value){
+
+
+  insert(value) {
     let node = new Node(value);
     node.next = this.head;
     this.head = node;
   }
-};
+
+  insertBefore(value, newValue) {
+    let current = this.head;
+    while (current.next !== null) {
+      if (current.next.value === value) {
+        let node = new Node(newValue);
+        node.next = current.next;
+        current.next = node;
+        return;
+      }
+      return current;
+    }
+  }
+
+  insertAfter(value, newValue) {
+    let current = this.head;
+    while (current.next !== null) {
+      if (current.next.value === value) {
+        let node = new Node(newValue);
+        node.next = current.next;
+        current.next = node;
+        return;
+      }
+      return current;
+    }
+  }
+
+
+}
 
 let list = new LinkedList();
 list.include('a');
