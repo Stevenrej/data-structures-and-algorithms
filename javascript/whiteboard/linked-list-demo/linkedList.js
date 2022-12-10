@@ -56,18 +56,18 @@ class LinkedList {
     }
   }
 
-  insertAfter(value, newValue) {
-    let current = this.head;
-    while (current.next !== null) {
-      if (current.next.value === value) {
-        let node = new Node(newValue);
-        node.next = current.next;
-        current.next = node;
-        return;
-      }
-      return current;
-    }
-  }
+  // insertAfter(value, newValue) {
+  //   let current = this.head;
+  //   while (current.next !== null) {
+  //     if (current.next.value === value) {
+  //       let node = new Node(newValue);
+  //       node.next = current.next;
+  //       current.next = node;
+  //       return;
+  //     }
+  //     return current;
+  //   }
+  // }
 
 
 }

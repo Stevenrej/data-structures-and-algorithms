@@ -16,11 +16,19 @@ describe('Linked List', () => {
     expect(list.head.next.value).toEqual('b');
     expect(list.head.next.next.value).toEqual('c');
   });
- it ('Can properly insert into the linked list', () => {
-  list.insert('g');
-  expect(list.head.value).toEqual('g');
- });
+  it('Can properly insert into the linked list', () => {
+    list.insert('g');
+    expect(list.head.value).toEqual('g');
+  });
+
+  it('can traverse the linked list', () => {
+    list.toString();
+    let current = list.head;
+    expect(current.value).toEqual('g');
+  });
 });
+
+
 
 
 // Can successfully instantiate an empty linked list
