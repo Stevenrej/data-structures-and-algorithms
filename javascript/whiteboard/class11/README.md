@@ -1,4 +1,4 @@
-# Create a new class called
+# Create a new class called Pseudo Queue
 
 ## Challenge
 
