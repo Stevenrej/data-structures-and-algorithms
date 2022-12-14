@@ -11,4 +11,4 @@ representing whether or not the brackets in the string are balanced
 
 Using checks to make sure the correct output would be returned
 
-![uml](/class13.jpeg)
+![uml](class13.jpeg)
