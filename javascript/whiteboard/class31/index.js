@@ -46,6 +46,9 @@ class Hashtable {
   }
 }
 
+
+
+
 const repeatedWord = function (string) {
   const map = new Hashtable();
   const words = string.match(/\w+/g);
@@ -60,6 +63,8 @@ const repeatedWord = function (string) {
   }
   return '';
 };
+
+
 
 
 console.log(repeatedWord('It was the best of times. It was the worst of times.'));
