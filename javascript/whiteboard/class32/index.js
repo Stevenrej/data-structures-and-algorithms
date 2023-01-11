@@ -103,3 +103,9 @@ class Hashtable {
 }
 
 console.log(tree_intersection(tree1, tree2));
+
+module.exports = {
+  BinaryTree,
+  tree_intersection,
+  Node,
+};
