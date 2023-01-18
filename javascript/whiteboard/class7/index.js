@@ -8,6 +8,6 @@ list.add(4);
 
 
 
-
+console.log(list);
 
 list.nthFromLast(2);

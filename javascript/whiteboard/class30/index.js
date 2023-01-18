@@ -46,32 +46,19 @@ class Hashtable {
   }
 }
 
-const repeatedWord = function (string) {
-  const map = new Hashtable();
-  const words = string.match(/\w+/g);
-  console.log(words);
-  for (let word of words) {
-    let lowercase = word.toLowerCase();
-    if (map.has(lowercase)) {
-      return lowercase;
-    }
-    map.set(lowercase, 1);
-    console.log(map);
-  }
-  return '';
-};
 
 
-console.log(repeatedWord('It was the best of times. It was the worst of times.'));
-// const hashtable = new Hashtable();
-// hashtable.set('key1', 'value1');
-// hashtable.set('key2', 'value2');
-// console.log(hashtable.get('key1')); // 'value1'
-// console.log(hashtable.has('key1')); // true
-// console.log(hashtable.keys()); // ['key1', 'key2']
-// console.log(hashtable.hash('key1'));
-// console.log(hashtable.hash('key2'));
-// console.log(hashtable.has('key2')); // true
+
+
+const hashtable = new Hashtable();
+hashtable.set('key1', 'value1');
+hashtable.set('key2', 'value2');
+console.log(hashtable.get('key1')); // 'value1'
+console.log(hashtable.has('key1')); // true
+console.log(hashtable.keys()); // ['key1', 'key2']
+console.log(hashtable.hash('key1'));
+console.log(hashtable.hash('key2'));
+console.log(hashtable.has('key2')); // true
 
 
 module.exports = Hashtable;
