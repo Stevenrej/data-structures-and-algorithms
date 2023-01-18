@@ -16,4 +16,6 @@ The API of this function is simple and easy to use. It takes in a singly linked 
 
 
 
+![whiteboard](chal36.jpeg)
+
 
